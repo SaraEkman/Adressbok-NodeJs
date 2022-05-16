@@ -61,7 +61,6 @@ async function makeReq(url, method, body) {
 
 function renderData(addresses) {
     adressContainer.innerHTML = '';
-
     addresses.forEach(adress => {
         adressContainer.innerHTML += `<div class="adressContent">
         <h3>Aderessens namn: ${adress.adressName}</h3>
