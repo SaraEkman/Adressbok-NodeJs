@@ -1,0 +1,10 @@
+GET http://localhost:3000/adress
+
+###
+
+Post http://localhost:3000/adress
+Content-Type: application/json
+
+{
+    "adressName":"öservägen","epost":"sami@gmail.com","number":"643Q"
+}

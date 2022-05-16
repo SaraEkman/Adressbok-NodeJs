@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>adress bok</title>
+</head>
+
+<body>
+    <h1>Lägg till en ny adress</h1>
+    <form>
+        <label for="nameInput">Adressens namn: </label>
+        <input id="nameInput" type="text" placeholder="Adressens namn" name="adressName" required>
+        <label for="streetInput">Gatunummer: </label>
+        <input id="streetInput" type="text" placeholder="Gatunummer" name="number" required>
+        <label for="email">E-post: </label>
+        <input id="emailInput" type="email" placeholder="E-post" name="epost" required  pattern=".+@globex\.com" size="30">
+        <button type="submit">Spara</button>
+
+    </form>
+    <div id="adressContainer"></div>
+</body>
+
+</html>
