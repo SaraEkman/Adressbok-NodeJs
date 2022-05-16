@@ -69,5 +69,4 @@ function renderData(addresses) {
         <h3>E-post: ${adress.epost}</h3>
     </div>`;
     });
-
 }
