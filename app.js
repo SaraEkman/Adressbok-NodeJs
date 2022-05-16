@@ -1,9 +1,10 @@
 let express = require('express');
 const app = express();
 let fs = require('fs');
-const port = 4000;
+const port = process.env.PORT || 4000;
 let nanoId = require('nanoid');
-let cors = require('cors') 
+let cors = require('cors')
+let host = 'localhost' 
 
 app.use(express.json());
 app.use(express.static('./public'));
@@ -46,6 +47,6 @@ function getJson(url) {
     return dataContent;
 }
 
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
     console.log('server is now running on port ' + port);
 });
