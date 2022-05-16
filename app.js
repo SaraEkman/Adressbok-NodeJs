@@ -4,7 +4,7 @@ let fs = require('fs');
 const port = process.env.PORT || 4000;
 let nanoId = require('nanoid');
 let cors = require('cors')
-let host = 'localhost' 
+let host = '0.0.0.0' 
 
 app.use(express.json());
 app.use(express.static('./public'));
