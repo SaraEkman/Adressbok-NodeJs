@@ -5,6 +5,7 @@ window.addEventListener('load', async () => {
 });
 
 let form = document.querySelector('form');
+// let inputContainer = document.querySelector('form .inputContainer');
 let adressContainer = document.querySelector('#adressContainer');
 
 document.querySelector('form button').addEventListener('click', async (e) => {
