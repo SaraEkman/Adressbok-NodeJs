@@ -10,20 +10,24 @@ let adressContainer = document.querySelector('#adressContainer');
 document.querySelector('form button').addEventListener('click', async (e) => {
     e.preventDefault();
     try {
-        let body = {
-            adressName: form.adressName.value,
-            number: form.number.value,
-            epost: form.epost.value
-        };
-        let status = await makeReq('http://localhost:4000/adress', 'POST', body);
-        console.log(status);
-        console.log(body);
-        if (status === 'You have already adress') {
-            alert('Den adressen redan registrerad');
+        if (form.adressName.value === '' || form.number.value === '', form.epost.value === '') {
+            alert('Fyll i formuläret tack');
         } else {
-            let addresses = await makeReq('http://localhost:4000/adress', 'GET');
-            console.log(addresses);
-            renderData(addresses);
+            let body = {
+                adressName: form.adressName.value,
+                number: form.number.value,
+                epost: form.epost.value
+            };
+            let status = await makeReq('http://localhost:4000/adress', 'POST', body);
+            console.log(status);
+            console.log(body);
+            if (status === 'You have already adress') {
+                alert('Den adressen redan registrerad');
+            } else {
+                let addresses = await makeReq('http://localhost:4000/adress', 'GET');
+                console.log(addresses);
+                renderData(addresses);
+            }
         }
         form.adressName.value = '';
         form.number.value = '';
