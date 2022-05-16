@@ -47,6 +47,6 @@ function getJson(url) {
     return dataContent;
 }
 
-app.listen(port, () => {
+app.listen(port,host, () => {
     console.log('server is now running on port ' + port);
 });
