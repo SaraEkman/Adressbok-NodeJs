@@ -1,5 +1,5 @@
 window.addEventListener('load', async () => {
-    let addresses = await makeReq('http://localhost:4000/adress', 'GET');
+    let addresses = await makeReq('https://adressbokexpress.herokuapp.com/adress', 'GET');
     renderData(addresses);
     console.log(addresses);
 });
@@ -19,13 +19,13 @@ document.querySelector('form button').addEventListener('click', async (e) => {
                 number: form.number.value,
                 epost: form.epost.value
             };
-            let status = await makeReq('http://localhost:4000/adress', 'POST', body);
+            let status = await makeReq('https://adressbokexpress.herokuapp.com/adress', 'POST', body);
             console.log(status);
             console.log(body);
             if (status === 'You have already adress') {
                 alert('Den adressen redan registrerad');
             } else {
-                let addresses = await makeReq('http://localhost:4000/adress', 'GET');
+                let addresses = await makeReq('https://adressbokexpress.herokuapp.com/adress', 'GET');
                 console.log(addresses);
                 renderData(addresses);
             }
