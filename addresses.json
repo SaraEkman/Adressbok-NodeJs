@@ -1,1 +1,16 @@
-[{"adressName":"Hellevägen","number":"84G","epost":"helle@gmail.com","id":"cLqoPf","foundAdress":false},{"adressName":"Saravägen","number":"87w","epost":"sara@gmail.com","id":"yrgoB9","foundAdress":false},{"adressName":"sara","number":"ssss","epost":"sara@gmaol.com","id":"Hn1qci","foundAdress":false}]
+[
+  {
+    "adressName": "Hellevägen",
+    "number": "84G",
+    "epost": "helle@gmail.com",
+    "id": "cLqoPf",
+    "foundAdress": false
+  },
+  {
+    "adressName": "Saravägen",
+    "number": "87w",
+    "epost": "sara@gmail.com",
+    "id": "yrgoB9",
+    "foundAdress": false
+  }
+]

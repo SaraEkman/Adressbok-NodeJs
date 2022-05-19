@@ -58,7 +58,7 @@ app.post('/remove', (req, res) => {
 
     let addresses = getJson('./addresses.json');
 
-    let foundAdress = addresses.find((adress) => adress.id === req.body.id);
+    let foundAdress = addresses.find((adress) => adress.id == req.body.id);
     console.log(foundAdress);
     let foundIndex = addresses.findIndex((adress) => adress.id == foundAdress.id);
 
