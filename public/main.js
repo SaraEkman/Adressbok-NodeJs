@@ -82,19 +82,21 @@ function renderData(addresses) {
         <h3>Gatunamn: ${adress.adressName}</h3>
         <h3>Gatunummer: ${adress.number}</h3>
         <h3>E-post: ${adress.epost}</h3>
-        <button onclick="remove(${adress.id})" id="${adress.id}">Radera</button>
+        <button onclick="remove(id)" id="${adress.id}">Radera</button>
     </div>`;
     });
 }
 
 async function remove(id) {
-    console.log(id.id);
+    console.log(id);
 
-    let status = await makeReq('https://adressbokexpress.herokuapp.com/remove', 'POST', { "id": id.id });
-    console.log(status);
+    let status = await makeReq('https://adressbokexpress.herokuapp.com/remove', 'POST', { "id": id });
+    // let status = await makeReq('http://localhost:4000/remove', 'POST', { "id": id });
+    // console.log(status);
 
     let addresses = await makeReq('https://adressbokexpress.herokuapp.com/adress', 'GET');
-    console.log(addresses);
+    // let addresses = await makeReq('http://localhost:4000/adress', 'GET');
     renderData(addresses);
+    console.log(addresses);
 
 }

@@ -1,16 +1,1 @@
-[
-  {
-    "adressName": "Hellevägen",
-    "number": "84G",
-    "epost": "helle@gmail.com",
-    "id": "cLqoPf",
-    "foundAdress": false
-  },
-  {
-    "adressName": "Saravägen",
-    "number": "87w",
-    "epost": "sara@gmail.com",
-    "id": "yrgoB9",
-    "foundAdress": false
-  }
-]
+[{"adressName":"Hellevägen","number":"84G","epost":"helle@gmail.com","id":"cLqoPf","foundAdress":false},{"adressName":"Saravägen","number":"87w","epost":"sara@gmail.com","id":"yrgoB9","foundAdress":false}]
