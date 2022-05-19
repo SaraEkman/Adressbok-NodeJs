@@ -3,6 +3,10 @@ h1 {
   letter-spacing: 2px;
 }
 
+#error{
+  color: red;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -22,7 +26,7 @@ form input {
    border-radius: 5px 20px 5px;
 }
 
-form button {
+button {
   margin-top: 1em;
   margin-bottom: 1em;
  border-radius: 5px 20px 5px;

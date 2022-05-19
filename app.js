@@ -3,8 +3,8 @@ const app = express();
 let fs = require('fs');
 const port = process.env.PORT || 4000;
 let nanoId = require('nanoid');
-let cors = require('cors')
-let host = '0.0.0.0' 
+let cors = require('cors');
+let host = '0.0.0.0';
 
 app.use(express.json());
 app.use(express.static('./public'));
@@ -12,7 +12,7 @@ app.use(
     cors({
         "origin": "*",
         "methods": ["GET", "POST"]
-})
+    })
 );
 
 // app.use((req, res, next) => {
@@ -53,6 +53,22 @@ app.post('/adress', (req, res) => {
     }
 });
 
+app.post('/remove', (req, res) => {
+    console.log(req.body);
+
+    let addresses = getJson('./addresses.json');
+
+    let foundAdress = addresses.find((adress) => adress.id === req.body.id);
+    console.log(foundAdress);
+    let foundIndex = addresses.findIndex((adress) => adress.id == foundAdress.id);
+
+    console.log(foundIndex);
+    addresses.splice(foundIndex, 1)
+
+    fs.writeFileSync('./addresses.json', JSON.stringify(addresses));
+    return res.json('deleted succeed');
+});
+
 function getJson(url) {
     let dataContent = [];
     if (fs.existsSync(url)) {
@@ -61,6 +77,6 @@ function getJson(url) {
     return dataContent;
 }
 
-app.listen(port,host, () => {
+app.listen(port, host, () => {
     console.log('server is now running on port ' + port);
 });
